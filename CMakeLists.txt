@@ -12,4 +12,7 @@ find_package(OpenCV REQUIRED)
 add_executable(
     CameraCalibration
     src/CameraCalibration.cpp
+    src/CameraCalib.cpp
 )
+
+target_link_libraries(CameraCalibration ${OpenCV_LIBS})
