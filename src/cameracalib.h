@@ -9,6 +9,7 @@ class CameraCalib
 {
 public:
     CameraCalib();
+    ~CameraCalib();
     void run();
     bool update();
 private:
