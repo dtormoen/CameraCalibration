@@ -31,12 +31,26 @@ bool CameraCalib::update()
 
     if (key == 27) //escape key
         return false;
+    else if (key == ' ')
+    {
+        cout << "Capturing image " << calibImages.size() + 1 << "!" << endl;
+        calibImages.push_back(currentImage);
+    }
 
     return true;
+}
+
+void CameraCalib::calibrate()
+{
+
 }
 
 void CameraCalib::run()
 {
     while(update())
-    { }
+    {}
+    if (calibImages.size() > 0)
+    {
+        calibrate();
+    }
 }

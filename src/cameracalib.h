@@ -12,9 +12,9 @@ public:
     ~CameraCalib();
     void run();
     bool update();
+    void calibrate();
 private:
     std::vector<cv::Mat> calibImages;
-    cv::Mat currentImage;
     cv::VideoCapture capture;
 };
 
